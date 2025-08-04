@@ -3,18 +3,17 @@ import { sleep } from 'k6';
 import { error_check } from '../check/check.js';
 import { scenario } from 'k6/execution';
 
-import { ran } from '../api/script.js';
-import { callback_scb } from '../api/getJson.js';
+
+import { token } from '../api/token.js';
+import { cvp1_token } from '../api/cvp1_token.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  response = ran()
-  //response = callback_scb(scenario)
-
-  
+  //response = token()
+  response = cvp1_token()
   error_check(response);
   sleep(1)
 }
