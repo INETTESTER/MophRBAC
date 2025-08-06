@@ -13,9 +13,9 @@ import { cvp1_token_user } from '../api/cvp1_token_user.js';
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  response = token()
+  //response = token()
   //response = cvp1_token()
-  //response = cvp1_token_user()
+  response = cvp1_token_user()
   error_check(response);
   sleep(1)
 }
