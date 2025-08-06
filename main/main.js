@@ -6,6 +6,7 @@ import { scenario } from 'k6/execution';
 
 import { token } from '../api/token.js';
 import { cvp1_token } from '../api/cvp1_token.js';
+import { cvp1_token_user } from '../api/cvp1_token_user.js';
 
 
 
@@ -14,6 +15,7 @@ import { cvp1_token } from '../api/cvp1_token.js';
 export default function () {    //เรียกใช้ API ใน export default function
   response = token()
   //response = cvp1_token()
+  //response = cvp1_token_user()
   error_check(response);
   sleep(1)
 }
